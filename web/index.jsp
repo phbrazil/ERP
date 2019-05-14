@@ -2,11 +2,8 @@
  *
  * @author paulo.bezerra
  *-->
-<%@page import="java.sql.ResultSet"%>
-<%@page import="javax.naming.spi.DirStateFactory.Result"%>
-
 <%-- 
-    Created on : june 20, 2018, 11:13:17 PM
+    Created on : may 14 20, 2019, 11:13:17 PM
     Author     : paulo.bezerra
 --%>
 <!doctype html>
@@ -54,7 +51,7 @@
             <br>
             <br>
             <br>
-            <img class="mb-4" src="img/senac_logo.png" alt="logo ERP">
+            <img class="mb-4" style='width: 50%; height: 50%'src="img/senac_logo.png" alt="logo ERP">
             <h5 class="mb-0">Welcome to
                 <span style = "color: #add8e6">ERP Portable</span>
             </h5>
