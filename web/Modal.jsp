@@ -4,7 +4,7 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html lang="en">
     <head>
-        <title>Opportunity</title>
+        <title>ERP</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -27,20 +27,20 @@
 
         <div class="container">
             <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog" style="background-color: #ff0080;">
+            <div class="modal fade" id="myModal" role="dialog" style="background-color: #add8e6;">
                 <div class="modal-dialog">
 
                     <!-- Modal content-->
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title" style="color: black;"><strong><img src="img/mci_logo.png" style="width: 20%;height: 20%"> Opportunity</strong></h4>
+                            <h4 class="modal-title" style="color: black;"><strong><img src="img/senac_logo.png" style="width: 20%;height: 20%"> ERP Portable</strong></h4>
                         </div>
                         <div class="modal-body">
                             <p><strong>${mensagem}</strong></p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
                         </div>
                     </div>
 
