@@ -42,7 +42,7 @@ public class VendorsAutoCompleteDAO {
                 
                 clientes = clientes +"|"+resultgeral.getString("nomefantasia");
             }
-
+            System.out.println(clientes);
             conexao.close();
 
         } catch (Exception e) {

@@ -1,7 +1,7 @@
 <%@page import="controller.autocomplete.Vendors"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%
+<%    
     Vendors db = new Vendors();
 
     String query = request.getParameter("q");
