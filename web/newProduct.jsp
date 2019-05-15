@@ -55,13 +55,13 @@
                         </form>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <h4 class="text-muted">Cadastrar novo Fornecedor</h4>
+                        <h4 class="text-muted">Cadastrar novo Produto</h4>
                     </div>
                 </div>
 
                 <br>
                 <h5 class="mb-0">
-                    <span class="text-primary">Informação do Fornecedor</span>
+                    <span class="text-primary">Informação do Produto</span>
                 </h5>
                 <br>
             </div>
