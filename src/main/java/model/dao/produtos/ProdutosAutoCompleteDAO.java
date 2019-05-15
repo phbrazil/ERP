@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model.dao.vendors;
+package model.dao.produtos;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,14 +13,14 @@ import model.dao.conexao.Conexao;
  *
  * @author paulo.bezerra
  */
-public class VendorsAutoCompleteDAO {
+public class ProdutosAutoCompleteDAO {
 
     private Connection conexao = null;
 
     public String AutoComplete() {
 
         String selectgeral = "";
-        String clientes= "";
+        String produtos = "";
 
         Conexao bancoconexao = new Conexao();
         
@@ -35,12 +35,12 @@ public class VendorsAutoCompleteDAO {
 
             java.sql.Statement st = conexao.createStatement();
 
-            selectgeral = "select nomefantasia from tbVendors";
+            selectgeral = "select nomeprod from tbProduto";
             //selectgeral = "select DISTINCT cardname from OCRD where CardType = 'c'";
             ResultSet resultgeral = st.executeQuery(selectgeral);
             while (resultgeral.next()) {
                 
-                clientes = clientes +"|"+resultgeral.getString("nomefantasia");
+                produtos = produtos +"|"+resultgeral.getString("nomeprod");
             }
             conexao.close();
 
@@ -49,7 +49,7 @@ public class VendorsAutoCompleteDAO {
             System.out.println("Error: " + e.getMessage());
 
         }
-        return clientes;
+        return produtos;
     }
 
 }

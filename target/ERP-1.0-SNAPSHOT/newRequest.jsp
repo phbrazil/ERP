@@ -84,29 +84,27 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-3" data-toggle="tooltip" title='Código de barras do produto'>
-                        <label>Código do Fabricante <strong style="color: red;">***</strong></label>
+                    <div class="col-md-4 mb-3" data-toggle="tooltip" title='Nome do produto'>
+                        <label>Nome do Produto <strong style="color: red;">***</strong></label>
                         <div class="input-group">
 
-                            <input required autocomplete="off" data-toggle="tooltip"  class="form-control form-control-dark w-100" id="codfab" type="text"  aria-label="Search" name ="codfab"/>
+                            <input required autocomplete="off" onchange="naBaseProduto(this.value)" data-toggle="tooltip"  class="form-control form-control-dark w-100" id="nomeprod" type="text"  aria-label="Search" name ="nomeprod"/>
 
                         </div>
                     </div>
 
-                    <div class="col-md-7 mb-3" data-toggle="tooltip" title='Controle interno'>
-                        <label>Código Interno <strong style="color: red;">***</strong></label>
+                    <div class="col-md-4 mb-3" data-toggle="tooltip" title='Quantidade a ser comprada'>
+                        <label>Quantidade <strong style="color: red;">***</strong></label>
                         <div class="input-group">
-                            <input autocomplete="off" name="codint" type="text" class="form-control" id="codint" placeholder="" maxlength ="60" required>
-                            <div class="invalid-feedback">
-                                Primeiro nome necessário
-                            </div>
+                            <input autocomplete="off" name="qtd" type="number" class="form-control" id="qtd" placeholder="" value ='1' min='1' required>
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label>Situação do Produto</label>
-                        <select name = "situacao" data-toggle="tooltip" title="Situação do produto" data-placement="bottom" class="custom-select d-block w-100" id="situacao"  required>
-                            <option>Ativo</option>
-                            <option>Inativo </option>
+                        <label>Prioridade</label>
+                        <select name = "prioridade" data-toggle="tooltip" title="Prioridade da compra" data-placement="bottom" class="custom-select d-block w-100" id="prioridade"  required>
+                            <option>Baixa</option>
+                            <option>Média</option>
+                            <option>Alta</option>
                         </select>
                         <div class="invalid-feedback">
                             Favor selecionar uma categoria..
@@ -145,25 +143,25 @@
         <script src="js/StatusVSProbability.js"></script>
 
         <script>
-                        // Example starter JavaScript for disabling form submissions if there are invalid fields
-                        (function () {
-                            'use strict';
-                            window.addEventListener('load', function () {
-                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                                var forms = document.getElementsByClassName('needs-validation');
-                                // Loop over them and prevent submission
-                                var validation = Array.prototype.filter.call(forms, function (form) {
-                                    form.addEventListener('submit', function (event) {
-                                        if (form.checkValidity() === false) {
-                                            event.preventDefault();
-                                            event.stopPropagation();
-                                        }
-                                        form.classList.add('was-validated');
-                                    }, false);
-                                });
-                            }, false);
-                        }
-                        )();
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    }
+                    )();
         </script>
 
 
@@ -217,6 +215,25 @@
 
         </script>
 
+        <script>
+
+            $("#nomeprod").autocomplete({
+                source: $("#nomeprod").autocomplete("getdataProducts.jsp")});
+
+            function naBaseProduto(val) {
+                var source = $("#nomeprod").autocomplete("getdataProducts.jsp");
+
+                var length = source.length;
+                for (var i = 0; i < length; i++) {
+                    if (source[i] != val) {
+                        document.getElementById('nomeprod').value = "";
+                        document.getElementById('nomeprod').placeholder = "Produto não cadastrado na base";
+                    }
+                }
+            }
+
+
+        </script>
 
 
         <script>

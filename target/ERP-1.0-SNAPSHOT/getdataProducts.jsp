@@ -1,8 +1,8 @@
+<%@page import="controller.autocomplete.Produtos"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
-<%@page import="com.mcibrasil.opportunity.controller.AutoComplete.Projetos"%>
 <%
-    Projetos db = new Projetos();
+    Produtos db = new Produtos();
 
     String query = request.getParameter("q");
 
@@ -10,8 +10,8 @@
 
     Iterator<String> iterator = countries.iterator();
     do {
-        String projetos = (String) iterator.next();
-        out.println(projetos);
+        String produtos = (String) iterator.next();
+        out.println(produtos);
     } while (iterator.hasNext());
 
 %>
