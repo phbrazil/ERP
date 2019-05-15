@@ -1,5 +1,5 @@
-CREATE USER 'erp'@'localhost' IDENTIFIED BY 'senac';    
-GRANT ALL PRIVILEGES ON * . * TO 'erp'@'localhost';
+-- CREATE USER 'erp'@'localhost' IDENTIFIED BY 'senac';    
+-- GRANT ALL PRIVILEGES ON * . * TO 'erp'@'localhost';
 DROP DATABASE erp;
 CREATE DATABASE erp;
 USE erp;
@@ -30,6 +30,32 @@ situacao BOOLEAN NOT NULL DEFAULT true,
 descricao VARCHAR(300) NOT NULL DEFAULT '',
 createdby VARCHAR(60) NOT NULL DEFAULT '',
 datacadastro VARCHAR(60) DEFAULT '',
+PRIMARY KEY (id));
+
+CREATE TABLE tbProduto(
+id INT NOT NULL AUTO_INCREMENT,
+nomeprod VARCHAR(100) NOT NULL DEFAULT '',
+codfab varchar(60) NOT NULL DEFAULT '',
+codint VARCHAR(60) NOT NULL DEFAULT '',
+situacao BOOLEAN NOT NULL DEFAULT true,
+descricao VARCHAR(300) NOT NULL DEFAULT '',
+createdby VARCHAR(60) NOT NULL DEFAULT '',
+datacadastro VARCHAR(60) DEFAULT '',
+PRIMARY KEY (id));
+
+
+CREATE TABLE tbPedidoCompra(
+id INT NOT NULL AUTO_INCREMENT,
+razaosocial VARCHAR(100) NOT NULL DEFAULT '',
+nomeprod varchar(60) NOT NULL DEFAULT '',
+qtd INT NOT NULL DEFAULT 0,
+parcelamento VARCHAR(20) NOT NULL DEFAULT '',
+entrega VARCHAR(60) NOT NULL DEFAULT '',
+prioridade VARCHAR(60) NOT NULL DEFAULT '',
+obs VARCHAR(300) DEFAULT '',
+aprovado boolean DEFAULT false,
+createdby VARCHAR(60) NOT NULL DEFAULT '',
+datacadastro VARCHAR(20) NOT NULL DEFAULT '',
 PRIMARY KEY (id));
 
 

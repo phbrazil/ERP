@@ -72,7 +72,7 @@
                 </h5>
                 <br>
             </div>
-            <form name = "createRequest" id ='createRequest' action="${pageContext.request.contextPath}/createRequest" method="POST">
+            <form name = "createPedidoCompra" id ='createPedidoCompra' action="${pageContext.request.contextPath}/createPedidoCompra" method="POST">
                 <div class="row" style="width: 70%;">
                     <div class="col-md-6 mb-3" data-toggle="tooltip" title='Nome do Fornecedor'>
                         <label>Nome do Fornecedor <strong style="color: red;">***</strong></label>

@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.pedidoCompra.tbPedidoCompra;
 import model.produto.tbProduto;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -50,20 +51,17 @@ public class createPedidoCompra extends HttpServlet {
 
         String data = new SimpleDateFormat("dd/MM/yyyy hh:mm").format(Calendar.getInstance().getTime());
 
-        tbProduto produto = new tbProduto(0, "", "", "", false, "", "", "");
-
-        produto.setNomeprod(request.getParameter("nomeprod"));
-        produto.setCodfab(request.getParameter("codfab"));
-        produto.setCodint(request.getParameter("codint"));
+        tbPedidoCompra pedido = new tbPedidoCompra(0, "", "", 0, "", "", "", "", true);
         
-        if(request.getParameter("situacao").equals("Ativo")){
-            produto.setSituacao(true);
-        }else{
-            produto.setSituacao(false);
-        }
-        produto.setDescricao(request.getParameter("descricao"));
-        produto.setCreatedby(emailuser);
-        produto.setDatacadastro(data);
+        
+        pedido.setRazaosocial(request.getParameter("razaosocial"));
+        pedido.setNomeprod(request.getParameter("nomeprod"));
+        pedido.setQtd(Integer.valueOf(request.getParameter("qtd")));
+        pedido.setParcelamento(request.getParameter("parcelamento"));
+        pedido.setEntrega(request.getParameter("entrega"));
+        pedido.setPrioridade(request.getParameter("prioridade"));
+        pedido.setObs(request.getParameter("obs"));
+        pedido.setAprovado(false);
 
         Integer id = 0;
 
@@ -78,7 +76,7 @@ public class createPedidoCompra extends HttpServlet {
         try {
             //inicia a transacao com o banco
             Transaction tx = session.beginTransaction();
-            id = (Integer) session.save(produto);
+            id = (Integer) session.save(pedido);
 
             //comita as informacoes
             tx.commit();
