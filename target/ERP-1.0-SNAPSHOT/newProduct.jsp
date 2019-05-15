@@ -108,7 +108,7 @@
                     <div class="col-md-12 mb-3">
                         <label>Descrição</label>
                         <div align ="center">
-                            <textarea onkeydown="charactersCount('descricaoProd', this.value)" maxlength="200" id='descricao' name ='descricao' class="col-md-5 mb-3">${respostasCriacao.obs}</textarea>     
+                            <textarea onkeydown="charactersCount('descricaoProd', this.value)" maxlength="200" id='descricao' name ='descricao' class="col-md-5 mb-3"></textarea>     
                         </div>
                         <input type='text' readonly id='descricaoProd' style='border: none; color: red'>
                     </div>

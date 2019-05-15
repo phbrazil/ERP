@@ -62,7 +62,7 @@
                         </form>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <h4 class="text-muted">Cadastrar novo Pedido de Compra</h4>
+                        <h4 class="text-muted">Novo Pedido de Compra</h4>
                     </div>
                 </div>
 
@@ -74,7 +74,7 @@
             </div>
             <form name = "createRequest" id ='createRequest' action="${pageContext.request.contextPath}/createRequest" method="POST">
                 <div class="row" style="width: 70%;">
-                    <div class="col-md-7 mb-3" data-toggle="tooltip" title='Nome do Fornecedor'>
+                    <div class="col-md-6 mb-3" data-toggle="tooltip" title='Nome do Fornecedor'>
                         <label>Nome do Fornecedor <strong style="color: red;">***</strong></label>
                         <div class="input-group">
                             <input autocomplete="off" onchange="naBaseFornecedor(this.value)" autofocus name="razaosocial" type="text" class="form-control" id="razaosocial" placeholder=""   maxlength ="60" required>
@@ -84,7 +84,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-3" data-toggle="tooltip" title='Nome do produto'>
+                    <div class="col-md-6 mb-3" data-toggle="tooltip" title='Nome do produto'>
                         <label>Nome do Produto <strong style="color: red;">***</strong></label>
                         <div class="input-group">
 
@@ -93,13 +93,43 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 mb-3" data-toggle="tooltip" title='Quantidade a ser comprada'>
+                    <div class="col-md-3 mb-3" data-toggle="tooltip" title='Quantidade a ser comprada'>
                         <label>Quantidade <strong style="color: red;">***</strong></label>
                         <div class="input-group">
                             <input autocomplete="off" name="qtd" type="number" class="form-control" id="qtd" placeholder="" value ='1' min='1' required>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-3 mb-3">
+                        <label>Parcelamento</label>
+                        <select name = "parcelamento" data-toggle="tooltip" title="Parcelamento da compra" data-placement="bottom" class="custom-select d-block w-100" id="parcelamento"  required>
+                            <option>1X</option>
+                            <option>2X</option>
+                            <option>3X</option>
+                            <option>4X</option>
+                            <option>5X</option>
+                            <option>6X</option>
+                            <option>7X</option>
+                            <option>8X</option>
+                            <option>9X</option>
+                            <option>10X</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Favor selecionar uma categoria..
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label>Entrega</label>
+                        <select name = "entrega" data-toggle="tooltip" title="Entrega da compra" data-placement="bottom" class="custom-select d-block w-100" id="entrega"  required>
+                            <option>À retirar</option>
+                            <option>Entrega sem acréscimo</option>
+                            <option>Entrega com frete</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Favor selecionar uma categoria..
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
                         <label>Prioridade</label>
                         <select name = "prioridade" data-toggle="tooltip" title="Prioridade da compra" data-placement="bottom" class="custom-select d-block w-100" id="prioridade"  required>
                             <option>Baixa</option>
@@ -111,11 +141,11 @@
                         </div>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label>Descrição</label>
+                        <label>Observações</label>
                         <div align ="center">
-                            <textarea onkeydown="charactersCount('descricaoProd', this.value)" maxlength="200" id='descricao' name ='descricao' class="col-md-5 mb-3">${respostasCriacao.obs}</textarea>     
+                            <textarea onkeydown="charactersCount('obsCount', this.value)" maxlength="200" id='obs' name ='obs' class="col-md-5 mb-3"></textarea>     
                         </div>
-                        <input type='text' readonly id='descricaoProd' style='border: none; color: red'>
+                        <input type='text' readonly id='obsCount' style='border: none; color: red'>
                     </div>
                 </div>
                 <button class="btn btn-lg btn-outline-success" type="submit" onclick="{
@@ -131,16 +161,9 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
 
-        <script src="js/calcularProjeto.js"></script>
         <script src="js/tamanhodata.js"></script>
-        <script src="js/searchSuggestProjectname.js"></script>
-        <script src="js/searchSuggestProjectCode.js"></script>
-        <script src="js/confirmCompleteProjeto.js"></script>
-        <script src="js/Probability.js"></script>
-        <script src="js/Localidade.js"></script>
         <script src="js/formatarMoeda.js"></script>
         <script src="js/collapse_button.js"></script>
-        <script src="js/StatusVSProbability.js"></script>
 
         <script>
                     // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -177,16 +200,10 @@
         <script src="js/jquery.js"></script>
         <script src="js/jquery.autocomplete.js"></script>
         <script src="js/jquery.maskMoney.js"></script>
-        <script src="js/AnoFiscal.js"></script>
         <script src="js/customAlert.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-        <script src="js/DorierValida.js"></script>
-        <script src="js/lostReason.js"></script>
-        <script src="js/codeUnique.js"></script>
-        <script src="js/datasProjetoValida.js"></script>
-        <script src="js/projects/ContatoMCI.js"></script>
-        <script src="js/projects/therapyCluster.js"></script>
+        <script src="js/produto/charactersCount.js"></script>
 
         <script>
             $(document).ready(function () {
