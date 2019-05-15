@@ -5,8 +5,6 @@
  */
 package controller.pedidoCompra;
 
-import controller.produto.*;
-import model.vendor.tbVendors;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -18,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import model.pedidoCompra.tbPedidoCompra;
-import model.produto.tbProduto;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -40,8 +37,9 @@ public class createPedidoCompra extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
 
-        request.getCharacterEncoding();
+        //request.getCharacterEncoding();
 
         PrintWriter out = response.getWriter();
 
@@ -69,7 +67,7 @@ public class createPedidoCompra extends HttpServlet {
 
         //GRAVAR NO BANCO
         //indica as configuracoes do banco
-        Configuration con = new Configuration().configure().addAnnotatedClass(tbProduto.class);
+        Configuration con = new Configuration().configure().addAnnotatedClass(tbPedidoCompra.class);
         SessionFactory sf = con.buildSessionFactory();
 
         //abre sessao com o banco
