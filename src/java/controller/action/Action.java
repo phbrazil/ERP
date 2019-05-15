@@ -46,6 +46,12 @@ public class Action extends HttpServlet {
         } else if (action.equals("newRequest")) {
 
             request.getRequestDispatcher("newRequest.jsp").forward(request, response);
+            
+        } else if (action.equals("Sair")) {
+            
+            sessao.invalidate();
+
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }
     }
 
