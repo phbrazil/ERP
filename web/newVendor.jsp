@@ -65,7 +65,7 @@
                 </h5>
                 <br>
             </div>
-            <form name = "cliente" id ='cliente' action="${pageContext.request.contextPath}/newVendor" method="POST">
+            <form name = "createVendor" id ='createVendor' action="${pageContext.request.contextPath}/createVendor" method="POST">
                 <div class="row" style="width: 70%;">
                     <div class="col-md-7 mb-3" data-toggle="tooltip" title='Campo obrigatório'>
                         <label>Razão Social <strong style="color: red;">***</strong></label>
@@ -81,7 +81,7 @@
                         <label>CNPJ <strong style="color: red;">***</strong></label>
                         <div class="input-group">
 
-                            <input required autocomplete="off" data-toggle="tooltip"  class="form-control form-control-dark w-100" id="cnpjcpf" type="text" onblur="naBase(this.value)" aria-label="Search" name ="cnpjcpf"/>
+                            <input required autocomplete="off" data-toggle="tooltip"  class="form-control form-control-dark w-100" id="cnpj" type="text" aria-label="Search" name ="cnpj"/>
 
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                     <div class="col-md-4 mb-3" data-toggle="tooltip" title='Campo obrigatório'>
                         <label>Website <strong style="color: red;">***</strong></label>
                         <div class="input-group">
-                            <input autocomplete="off" name="site" type="text" class="form-control" id="site" placeholder="example www.mcibrasil.com.br"  required maxlength ="50">
+                            <input autocomplete="off" name="website" type="text" class="form-control" id="website" placeholder="example www.senac.com.br"  required maxlength ="50">
                             <div class="invalid-feedback">
                                 Site necessário
                             </div>
@@ -173,7 +173,7 @@
                     <div class="col-md-6 mb-3">
                         <label>Cargo pessoa de contato</label>
                         <div class="input-group">
-                            <input autocomplete="off" name="cargocontato" type="text" class="form-control" id="cargocontato" placeholder="" maxlength ="60">
+                            <input autocomplete="off" name="cargo" type="text" class="form-control" id="cargo" placeholder="" maxlength ="60">
                             <div class="invalid-feedback">
                                 Contato necessário
                             </div>
@@ -252,7 +252,7 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                $("#cnpjcpf").mask("99.999.999/9999-99");
+                $("#cnpj").mask("99.999.999/9999-99");
             });
         </script>
 
@@ -260,14 +260,6 @@
         <script src="js/customAlert.js"></script>
         <script>
             feather.replace();
-        </script>
-        <script>
-
-
-
-            $("#cnpjcpf").autocomplete({
-                source: $("#cnpjcpf").autocomplete("getdataCNPJ.jsp")});
-
         </script>
 
         <script>

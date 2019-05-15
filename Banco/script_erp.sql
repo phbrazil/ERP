@@ -1,0 +1,33 @@
+-- CREATE USER 'erp'@'localhost' IDENTIFIED BY 'senac';    
+-- GRANT ALL PRIVILEGES ON * . * TO 'erp'@'localhost';
+DROP DATABASE erp;
+CREATE DATABASE erp;
+USE erp;
+    
+CREATE TABLE tbVendors(
+id INT NOT NULL AUTO_INCREMENT,
+razaosocial VARCHAR(100) NOT NULL DEFAULT '',
+cnpj varchar(20) NOT NULL DEFAULT '',
+nomefantasia VARCHAR(100) NOT NULL DEFAULT '',
+website VARCHAR(60) NOT NULL DEFAULT '',
+industrysector VARCHAR(60) NOT NULL DEFAULT '',
+phone1 VARCHAR(60) NOT NULL DEFAULT '',
+phone2 VARCHAR(60) DEFAULT '',
+contato VARCHAR(60) NOT NULL DEFAULT '',
+cargo VARCHAR(60) NOT NULL DEFAULT '',
+email VARCHAR(60) NOT NULL DEFAULT '',
+createdby VARCHAR(60) NOT NULL DEFAULT '',
+datacadastro VARCHAR(20) NOT NULL DEFAULT '',
+PRIMARY KEY (id));
+
+
+
+
+
+
+
+
+
+
+
+
