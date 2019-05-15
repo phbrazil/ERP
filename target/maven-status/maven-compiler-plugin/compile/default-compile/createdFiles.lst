@@ -12,6 +12,7 @@ model\produto\tbProdutoJpaController.class
 controller\action\Action.class
 controller\vendor\createVendor.class
 model\produto\exceptions\PreexistingEntityException.class
+controller\pedidoCompra\createPedidoCompra.class
 controller\produto\createProduto.class
 model\dao\vendors\VendorsAutoCompleteDAO.class
 model\produto\exceptions\RollbackFailureException.class
