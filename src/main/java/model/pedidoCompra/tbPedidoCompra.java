@@ -31,11 +31,32 @@ public class tbPedidoCompra implements Serializable {
     private String prioridade;
     private String obs;
     private boolean aprovado;
+    private String createdby;
+    private String datacadastro;
+
+    public String getCreatedby() {
+        return createdby;
+    }
+
+    public void setCreatedby(String createdby) {
+        this.createdby = createdby;
+    }
+
+    public String getDatacadastro() {
+        return datacadastro;
+    }
+
+    public void setDatacadastro(String datacadastro) {
+        this.datacadastro = datacadastro;
+    }
+    
+    
     
     
     
     public tbPedidoCompra(Integer id, String razaosocial, String nomeprod, int qtd, 
-            String parcelamento, String entrega, String prioridade, String obs, boolean aprovado) {
+            String parcelamento, String entrega, String prioridade, 
+            String obs, boolean aprovado, String createdby, String datacadastro) {
         this.id = id;
         this.razaosocial = razaosocial;
         this.nomeprod = nomeprod;
@@ -45,6 +66,8 @@ public class tbPedidoCompra implements Serializable {
         this.prioridade = prioridade;
         this.obs = obs;
         this.aprovado = aprovado;
+        this.createdby = createdby;
+        this.datacadastro = datacadastro;
     }
 
     public boolean isAprovado() {

@@ -51,7 +51,7 @@ public class createPedidoCompra extends HttpServlet {
 
         String data = new SimpleDateFormat("dd/MM/yyyy hh:mm").format(Calendar.getInstance().getTime());
 
-        tbPedidoCompra pedido = new tbPedidoCompra(0, "", "", 0, "", "", "", "", true);
+        tbPedidoCompra pedido = new tbPedidoCompra(0, "", "", 0, "", "", "", "", true,"","");
         
         
         pedido.setRazaosocial(request.getParameter("razaosocial"));
@@ -62,6 +62,8 @@ public class createPedidoCompra extends HttpServlet {
         pedido.setPrioridade(request.getParameter("prioridade"));
         pedido.setObs(request.getParameter("obs"));
         pedido.setAprovado(false);
+        pedido.setCreatedby(emailuser);
+        pedido.setDatacadastro(data);
 
         Integer id = 0;
 
