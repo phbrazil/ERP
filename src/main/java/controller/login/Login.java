@@ -35,13 +35,21 @@ public class Login extends HttpServlet {
         HttpSession sessao = request.getSession();
 
         if (emailuser.equals("erp@senac.com.br") && password.equals("senac")) {
-
+            
             sessao.setAttribute("emailuser", emailuser);
             sessao.setAttribute("nomecomp", "Aluno");
             sessao.setAttribute("sessaoid", sessao.getId());
             
-           
-            request.getRequestDispatcher("Home.jsp").forward(request, response);
+            PrintWriter out = response.getWriter();
+            
+            String path = "Home.jsp";
+            String mensagem = "Sistema desenvolvido por: <br><br><strong>Paulo Henrique Bezerra</strong>"
+                    + "<br><br><strong>Lucas Medeiros</strong><br><br>"
+                    + "<strong>Andre Pereira Martins</strong>";
+            request.setAttribute("path", path);
+            out.println("<script type='text/javascript'>");
+            out.println("location='Modal?path=" + path + "&mensagem=" + mensagem + "';");
+            out.println("</script>");
 
         } else {
             PrintWriter out = response.getWriter();

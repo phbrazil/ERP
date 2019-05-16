@@ -54,7 +54,7 @@ public class approvalRequest extends HttpServlet {
 
             AprovarPedidoCompraDAO aprovar = new AprovarPedidoCompraDAO();
 
-            aprovar.AprovarPedido(id);
+            aprovar.AprovarPedido(id, true);
 
             String subject = "ERPortable - Novo pedido de compra";
 
@@ -74,6 +74,17 @@ public class approvalRequest extends HttpServlet {
             request.getRequestDispatcher("EmailAlertNewRequest.jsp").forward(request, response);
 
         } else {
+
+            AprovarPedidoCompraDAO aprovar = new AprovarPedidoCompraDAO();
+
+            aprovar.AprovarPedido(id, false);
+
+            String path = "Home.jsp";
+            String mensagem = "Pedido Rejeitado";
+            request.setAttribute("path", path);
+            out.println("<script type='text/javascript'>");
+            out.println("location='Modal?path=" + path + "&mensagem=" + mensagem + "';");
+            out.println("</script>");
 
         }
 

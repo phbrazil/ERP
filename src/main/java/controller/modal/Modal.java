@@ -33,12 +33,6 @@ public class Modal extends HttpServlet {
         String path = (String) request.getParameter("path");
         String mensagem = (String) request.getParameter("mensagem");
 
-        mensagem = mensagem.replace("$", "´");
-
-        if (mensagem.contains("�")) {
-            path = "Home.jsp";
-
-        }
         request.setAttribute("path", path);
         request.setAttribute("mensagem", mensagem);
 

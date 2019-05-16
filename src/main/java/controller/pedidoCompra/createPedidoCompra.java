@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import javax.servlet.ServletException; 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -40,7 +40,6 @@ public class createPedidoCompra extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
 
         //request.getCharacterEncoding();
-
         PrintWriter out = response.getWriter();
 
         HttpSession sessao = request.getSession(true);
@@ -49,9 +48,8 @@ public class createPedidoCompra extends HttpServlet {
 
         String data = new SimpleDateFormat("dd/MM/yyyy hh:mm").format(Calendar.getInstance().getTime());
 
-        tbPedidoCompra pedido = new tbPedidoCompra(0, "", "", 0, "", "", "", "", true,"","");
-        
-        
+        tbPedidoCompra pedido = new tbPedidoCompra(0, "", "", 0, "", "", "", "", true, "", "");
+
         pedido.setRazaosocial(request.getParameter("razaosocial"));
         pedido.setNomeprod(request.getParameter("nomeprod"));
         pedido.setQtd(Integer.valueOf(request.getParameter("qtd")));
@@ -91,7 +89,7 @@ public class createPedidoCompra extends HttpServlet {
         if (id > 0) {
 
             String path = "Home.jsp";
-            String mensagem = "Novo pedido de Compra ID " + id+ " cadastrado!";
+            String mensagem = "Novo pedido de Compra ID " + id + " cadastrado!";
             request.setAttribute("path", path);
             out.println("<script type='text/javascript'>");
             out.println("location='Modal?path=" + path + "&mensagem=" + mensagem + "';");
@@ -102,7 +100,8 @@ public class createPedidoCompra extends HttpServlet {
             request.setAttribute("path", path);
             out.println("<script type='text/javascript'>");
             out.println("location='Modal?path=" + path + "&mensagem=" + mensagem + "';");
-            out.println("</script>");        }
+            out.println("</script>");
+        }
 
     }
 

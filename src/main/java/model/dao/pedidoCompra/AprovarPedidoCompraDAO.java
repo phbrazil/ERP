@@ -15,7 +15,7 @@ import model.dao.conexao.Conexao;
  */
 public class AprovarPedidoCompraDAO {
 
-    public boolean AprovarPedido(int id) {
+    public boolean AprovarPedido(int id, boolean aprovado) {
 
         boolean atualizado = false;
 
@@ -26,11 +26,12 @@ public class AprovarPedidoCompraDAO {
 
             Connection conexao = bancoconexao.getConnection();
 
-            String query = ("update tbPedidoCompra set aprovado = true where "
+            String query = ("update tbPedidoCompra set aprovado = ? where "
                     + " id = ?;");
 
             PreparedStatement preparedStmt = conexao.prepareStatement(query);
-            preparedStmt.setInt(1, id);
+            preparedStmt.setBoolean(1, aprovado);
+            preparedStmt.setInt(2, id);
 
             preparedStmt.execute();
 
