@@ -101,7 +101,7 @@
                 </div>
             </div>
             <br>
-            <form id='EditRequest' action="${pageContext.request.contextPath}/EditRequest" name = "EditRequest" method="POST" target="blank"></form>
+            <form id='getPedidoCompra' action="${pageContext.request.contextPath}/getPedidoCompra" name = "getPedidoCompra" method="POST" target="blank"></form>
             <br>
             <div>
                 <table class="table-responsive-lg">
@@ -119,14 +119,14 @@
                         <td  bgcolor="#add8e6" align = "center"><strong>Aprovado</strong></td>
                     </tr>
 
-                    <%                        List<tbPedidoCompra> tasks = (List<tbPedidoCompra>) request.getAttribute("pendencias");
+                    <%                        List<tbPedidoCompra> pendencias = (List<tbPedidoCompra>) request.getAttribute("pendencias");
 
-                        if (tasks.size() > 0) {
+                        if (pendencias.size() > 0) {
 
                             //for (Iterator iterator = pacotes.iterator(); iterator.hasNext();) {
-                            for (int i = 0; i < tasks.size(); i++) {
+                            for (int i = 0; i < pendencias.size(); i++) {
 
-                                if (tasks.get(i).isAprovado() == false) {
+                                if (pendencias.get(i).isAprovado() == false) {
                                     color = "#FF7F7F";
                                 } else {
                                     color = "#008000";
@@ -136,16 +136,17 @@
                     %>
                     <tr id = 'linha'>
                         <td><%=linha%></td>
-                        <td><strong><%=tasks.get(i).getRazaosocial()%></strong></td>
-                        <td><%=tasks.get(i).getNomeprod()%></td>
-                        <td><%=tasks.get(i).getQtd()%></td>
-                        <td><%=String.valueOf(tasks.get(i).getParcelamento())%></td>
-                        <td><%=String.valueOf(tasks.get(i).getEntrega())%></td>
-                        <td><strong><%=String.valueOf(tasks.get(i).getPrioridade())%></strong></td>
-                        <td><textarea readonly><%=String.valueOf(tasks.get(i).getObs())%></textarea></td>
-                        <td><%=String.valueOf(tasks.get(i).getCreatedby())%></td>
-                        <td><%=String.valueOf(tasks.get(i).getDatacadastro())%></td>
-                        <td style='color: white;' bgcolor='<%=color%>'<strong><%=tasks.get(i).isAprovado()%></strong></td>
+                        <td><strong><%=pendencias.get(i).getRazaosocial()%></strong></td>
+                        <td><%=pendencias.get(i).getNomeprod()%></td>
+                        <td><%=pendencias.get(i).getQtd()%></td>
+                        <td><%=String.valueOf(pendencias.get(i).getParcelamento())%></td>
+                        <td><%=String.valueOf(pendencias.get(i).getEntrega())%></td>
+                        <td><strong><%=String.valueOf(pendencias.get(i).getPrioridade())%></strong></td>
+                        <td><textarea readonly><%=String.valueOf(pendencias.get(i).getObs())%></textarea></td>
+                        <td><%=String.valueOf(pendencias.get(i).getCreatedby())%></td>
+                        <td><%=String.valueOf(pendencias.get(i).getDatacadastro())%></td>
+                        <td style='color: white;' bgcolor='<%=color%>'<strong><%=pendencias.get(i).isAprovado()%></strong></td>
+                        <td><button type="submit" class="btn btn-sm btn-outline-info" style="font-size: small;" form='getPedidoCompra' formaction="getPedidoCompra?id=<%=pendencias.get(i).getId()%>">Info</button></td>
                         <%
                                     linha++;
                                 }
@@ -226,7 +227,7 @@
          "Contact Third-Party Sellers",
          "More in Managing Your Orders"
          ];
-     
+         
          $('#form-autocomplete-1').mdb_autocomplete({
          data: subjects
          });*/
