@@ -73,7 +73,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
         <link rel="manifest" href="favicon/site.webmanifest">
-        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileColor" content="#add8e6">
         <meta name="theme-color" content="#ffffff">
 
         <title>Pendencias de Aprovação</title>
@@ -105,18 +105,18 @@
             <br>
             <div>
                 <table class="table-responsive-lg">
-                    <tr style="color: white;">
-                        <td  bgcolor="#ff0080" >Line</td>
-                        <td  bgcolor="#ff0080" align = "center">Razão Social</td>
-                        <td  bgcolor="#ff0080" align = "center">Nome do Produto</td>
-                        <td  bgcolor="#ff0080" align = "center">Quantidade</td>
-                        <td  bgcolor="#ff0080" align = "center">Parcelamento</td>
-                        <td  bgcolor="#ff0080" align = "center">Entrega</td>
-                        <td  bgcolor="#ff0080" align = "center">Prioridade</td>
-                        <td  bgcolor="#ff0080" align = "center">OBS</td>
-                        <td  bgcolor="#ff0080" align = "center">Criado por</td>
-                        <td  bgcolor="#ff0080" align = "center">Data Cadastro</td>
-                        <td  bgcolor="#ff0080" align = "center">Aprovado</td>
+                    <tr style="color: black;">
+                        <td  bgcolor="#add8e6" ><strong>Line</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Razão Social</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Nome do Produto</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Quantidade</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Parcelamento</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Entrega</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Prioridade</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Obs.</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Criado por</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Data cadastro</strong></td>
+                        <td  bgcolor="#add8e6" align = "center"><strong>Aprovado</strong></td>
                     </tr>
 
                     <%                        List<tbPedidoCompra> tasks = (List<tbPedidoCompra>) request.getAttribute("pendencias");
