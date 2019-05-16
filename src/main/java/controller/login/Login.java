@@ -43,9 +43,10 @@ public class Login extends HttpServlet {
             PrintWriter out = response.getWriter();
             
             String path = "Home.jsp";
-            String mensagem = "Sistema desenvolvido por: <br><br><strong>Paulo Henrique Bezerra</strong>"
-                    + "<br><br><strong>Lucas Medeiros</strong><br><br>"
-                    + "<strong>Andre Pereira Martins</strong>";
+            String mensagem = "<h2>Sistema desenvolvido por: </h2>"
+                    + "<br><h4><strong>Paulo Henrique Bezerra</strong></h4>"
+                    + "<br><h4><strong>Lucas Medeiros</strong></h4>"
+                    + "<br><h4><strong>Andre Pereira Martins</strong></h4>";
             request.setAttribute("path", path);
             out.println("<script type='text/javascript'>");
             out.println("location='Modal?path=" + path + "&mensagem=" + mensagem + "';");
