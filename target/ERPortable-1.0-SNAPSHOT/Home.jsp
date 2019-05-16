@@ -126,7 +126,7 @@
                             </form>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <form name = "ActionHome" action="${pageContext.request.contextPath}/ActionHome" method="POST">
+                            <form name = "ActionHome" action="${pageContext.request.contextPath}/ListarPedidoCompra" method="POST">
                                 <div class="card" style="width: 80%; height: 10%">
                                     <img class="card-img-top" src="img/pendingApproval.png" style="width: 60px; height: 60px;" alt="Scorecard">
                                     <div class="card-body">
