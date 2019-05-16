@@ -116,7 +116,7 @@
                         <td  bgcolor="#ff0080" align = "center">OBS</td>
                         <td  bgcolor="#ff0080" align = "center">Criado por</td>
                         <td  bgcolor="#ff0080" align = "center">Data Cadastro</td>
-                        <td  bgcolor="#ff0080" align = "center">Status</td>
+                        <td  bgcolor="#ff0080" align = "center">Aprovado</td>
                     </tr>
 
                     <%                        List<tbPedidoCompra> tasks = (List<tbPedidoCompra>) request.getAttribute("pendencias");
