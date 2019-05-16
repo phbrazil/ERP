@@ -141,8 +141,8 @@
                         <td><%=tasks.get(i).getQtd()%></td>
                         <td><%=String.valueOf(tasks.get(i).getParcelamento())%></td>
                         <td><%=String.valueOf(tasks.get(i).getEntrega())%></td>
-                        <td><%=String.valueOf(tasks.get(i).getPrioridade())%></td>
-                        <td><textarea><%=String.valueOf(tasks.get(i).getObs())%></textarea></td>
+                        <td><strong><%=String.valueOf(tasks.get(i).getPrioridade())%></strong></td>
+                        <td><textarea readonly><%=String.valueOf(tasks.get(i).getObs())%></textarea></td>
                         <td><%=String.valueOf(tasks.get(i).getCreatedby())%></td>
                         <td><%=String.valueOf(tasks.get(i).getDatacadastro())%></td>
                         <td style='color: white;' bgcolor='<%=color%>'<strong><%=tasks.get(i).isAprovado()%></strong></td>
