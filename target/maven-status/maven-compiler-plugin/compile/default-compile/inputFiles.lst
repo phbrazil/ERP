@@ -17,6 +17,7 @@ C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\p
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\autocomplete\Produtos.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\dao\pedidoCompra\AprovarPedidoCompraDAO.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\modal\Modal.java
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\EmailAlert\EmailSessionBeanRequest.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\login\Login.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\pedidoCompra\exceptions\RollbackFailureException.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\pedidoCompra\tbPedidoCompra.java
@@ -30,7 +31,6 @@ C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\p
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\produto\tbProduto.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\vendor\exceptions\NonexistentEntityException.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\pedidoCompra\exceptions\IllegalOrphanException.java
-C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\EmailAlert\EmailSessionBean.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\vendor\createVendor.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\produto\exceptions\PreexistingEntityException.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\autocomplete\Vendors.java

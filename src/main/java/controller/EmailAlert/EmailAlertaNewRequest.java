@@ -23,7 +23,7 @@ import javax.servlet.http.HttpSession;
 public class EmailAlertaNewRequest extends HttpServlet {
 
     @EJB
-    private EmailSessionBean emailBean;
+    private EmailSessionBeanRequest emailBean;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
