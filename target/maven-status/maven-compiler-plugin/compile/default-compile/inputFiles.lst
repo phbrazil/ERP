@@ -15,6 +15,7 @@ C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\v
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\vendor\exceptions\RollbackFailureException.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\pedidoCompra\listar\ListarPedidoCompra.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\autocomplete\Produtos.java
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\dao\pedidoCompra\AprovarPedidoCompraDAO.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\modal\Modal.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\login\Login.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\pedidoCompra\exceptions\RollbackFailureException.java

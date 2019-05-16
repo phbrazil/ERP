@@ -125,16 +125,19 @@
                         <input type='text' readonly id='obsCount' style='border: none; color: red'>
                     </div>
                 </div>
-                <button class="btn btn-lg btn-outline-success" type="submit" onclick="{
+
+                <c:set var = "aprovado" scope = "session" value = "${pedido.aprovado}"/>
+                <c:if test = "${aprovado == false}">
+                    <button class="btn btn-lg btn-outline-success" type="submit" onclick="{
                             return confirmCompleteCliente();
                         }" name = "approval" value="true">
-                    <span data-feather="save"></span> Aprovar</button>
+                        <span data-feather="save"></span> Aprovar</button>
 
-                <button class="btn btn-lg btn-outline-danger" type="submit" onclick="{
+                    <button class="btn btn-lg btn-outline-danger" type="submit" onclick="{
                             return confirmCompleteCliente();
                         }" name = "approval" value="false">
-                    <span data-feather="save"></span> Rejeitar</button>
-
+                        <span data-feather="save"></span> Rejeitar</button>
+                    </c:if>
                 <input type="hidden" name="id" value="${pedido.id}">
 
             </form>

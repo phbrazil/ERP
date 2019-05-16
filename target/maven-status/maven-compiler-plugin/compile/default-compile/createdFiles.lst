@@ -35,3 +35,4 @@ model\produto\exceptions\PreexistingEntityException.class
 controller\produto\createProduto.class
 model\dao\vendors\VendorsAutoCompleteDAO.class
 controller\vendor\exceptions\PreexistingEntityException.class
+model\dao\pedidoCompra\AprovarPedidoCompraDAO.class
