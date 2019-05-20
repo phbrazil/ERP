@@ -90,7 +90,7 @@
                     <div class="row">
                         <div class="col-md-4 mb-3">
                             <form name = "ActionHome" action="${pageContext.request.contextPath}/ActionHome" method="POST">
-                                <div class="card" style="width: 70%; height: 10%">
+                                <div class="card" style="width: 80%; height: 10%">
                                     <img class="card-img-top" src="img/newClient.png" style="width: 70px; height: 60px;" alt="Cliente">
                                     <div class="card-body">
                                         <h5 class="text-muted">Cadastrar Fornecedor</h5>
