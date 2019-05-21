@@ -66,7 +66,7 @@
 
 
                             <h4 class="text-muted">Olá 
-                                <span style = "color: #add8e6"><c:out value="${nomecomp}"/></span>
+                                <span style = "color: #008080"><c:out value="${nomecomp}"/></span>
                             </h4>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
 
 
             <footer class="my-5 pt-5 text-muted text-center text-small">
-                <p class="mb-0">Session
+                <p class="mb-0">Sessão
                     <span class="text-primary"><c:out value="${sessaoid}"/></span>
                 </p>
                 <p class="mb-0">&copy; 9ember Devs</p>
