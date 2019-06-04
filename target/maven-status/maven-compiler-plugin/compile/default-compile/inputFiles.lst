@@ -3,6 +3,7 @@ C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\pedido
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\EmailAlert\EmailAlertaNewRequest.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\pedidoCompra\getPedidoCompra.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\action\Action.java
+C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\pedidoCompra\GetEmailFornecedor.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\dao\conexao\Conexao.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\model\produto\exceptions\NonexistentEntityException.java
 C:\Users\paulo.bezerra\Documents\NetBeansProjects\ERP\src\main\java\controller\pedidoCompra\approvalRequest.java
