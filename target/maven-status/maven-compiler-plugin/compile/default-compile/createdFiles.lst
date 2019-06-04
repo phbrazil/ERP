@@ -25,6 +25,7 @@ controller\login\Login.class
 controller\EmailAlert\EmailSessionBeanRequest$1.class
 model\pedidoCompra\exceptions\NonexistentEntityException.class
 model\produto\tbProdutoJpaController.class
+controller\pedidoCompra\GetEmailFornecedor.class
 controller\pedidoCompra\listar\ListarPedidoCompra.class
 controller\action\Action.class
 model\pedidoCompra\exceptions\PreexistingEntityException.class
