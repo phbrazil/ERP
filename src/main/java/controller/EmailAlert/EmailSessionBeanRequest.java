@@ -83,8 +83,8 @@ public class EmailSessionBeanRequest {
             // second part (the image)
             messageBodyPart = new MimeBodyPart();
             DataSource fds = new FileDataSource(
-                    //"C:\\Users\\paulo.bezerra\\Documents\\NetBeansProjects\\ERP\\src\\main\\webapp\\img\\senac_email_logo.png");
-                    "/opt/tomcat/apache-tomee-webprofile-7.0.2/webapps/logos/senac_email_logo.png");
+                    "C:\\Users\\paulo.bezerra\\Documents\\NetBeansProjects\\ERP\\src\\main\\webapp\\img\\senac_email_logo.png");
+                    //"/opt/tomcat/apache-tomee-webprofile-7.0.2/webapps/logos/senac_email_logo.png");
 
             messageBodyPart.setDataHandler(new DataHandler(fds));
             messageBodyPart.setHeader("Content-ID", "<image>");
