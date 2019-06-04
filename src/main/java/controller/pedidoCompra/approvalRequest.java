@@ -48,7 +48,10 @@ public class approvalRequest extends HttpServlet {
         String prioridade = String.valueOf(request.getParameter("prioridade"));
         String obs = String.valueOf(request.getParameter("obs"));
         String approval = String.valueOf(request.getParameter("approval"));
-        String to1 = "paulo.bezerra@mci-group.com";
+
+        GetEmailFornecedor getEmail = new GetEmailFornecedor();
+
+        String to1 = getEmail.getEmail(razaosocial);
 
         if (approval.equals("true")) {
 

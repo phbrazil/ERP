@@ -37,6 +37,8 @@ public class createVendor extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        System.out.println("entrei aqui");
        
         request.setCharacterEncoding("UTF-8");
 

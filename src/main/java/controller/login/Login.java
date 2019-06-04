@@ -46,7 +46,9 @@ public class Login extends HttpServlet {
             String mensagem = "<h2>Sistema desenvolvido por: </h2>"
                     + "<br><h4><strong>Paulo Henrique Bezerra</strong></h4>"
                     + "<br><h4><strong>Lucas Medeiros</strong></h4>"
-                    + "<br><h4><strong>Andre Pereira Martins</strong></h4>";
+                    + "<br><h4><strong>Andre Pereira Martins</strong></h4>"
+                    + "<br><h4><strong>Vitoria Cristina Silva</strong></h4>"
+                    + "<br><h4><strong>Matheus Maia</strong></h4>";
             request.setAttribute("path", path);
             out.println("<script type='text/javascript'>");
             out.println("location='Modal?path=" + path + "&mensagem=" + mensagem + "';");
