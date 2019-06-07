@@ -66,7 +66,7 @@ public class EmailSessionBeanRequest {
         MimeMessage message = new MimeMessage(session);
         try {
 
-            message.setFrom(new InternetAddress(from));
+            message.setFrom(new InternetAddress("ERPortable <"+from+">"));
             InternetAddress[] address = {new InternetAddress(to1)};
             message.setRecipients(Message.RecipientType.TO, address);
             message.setSubject(subject, "UTF-8");
