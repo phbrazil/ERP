@@ -1,10 +1,10 @@
 # ERP
 Mini ERP Materia de APLICATIVOS INTEGRADOS
 Membros:
-Andre Pereira Martins
-Lucas Medeiros
-Mateus Maia
-Paulo Henrique Bezerra
+Andre Pereira Martins,
+Lucas Medeiros,
+Mateus Maia,
+Paulo Henrique Bezerra e 
 Vitoria Cristina Silva
 
 Fluxo:
