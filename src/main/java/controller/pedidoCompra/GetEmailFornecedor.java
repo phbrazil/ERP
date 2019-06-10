@@ -19,9 +19,7 @@ public class GetEmailFornecedor {
 
     private String email = "";
 
-
     public String getEmail(String razaosocial) {
-        
 
         String select = "";
 
@@ -36,15 +34,14 @@ public class GetEmailFornecedor {
 
             java.sql.Statement st = conexao.createStatement();
 
-            select = "select email from tbvendors where razaosocial = '"+razaosocial+"'";
-            
+            select = "select email from tbVendors where razaosocial = '" + razaosocial + "'";
+
             ResultSet result = st.executeQuery(select);
 
             while (result.next()) {
                 email = result.getString("email");
 
             }
-
 
             conexao.close();
             st.close();
@@ -55,7 +52,14 @@ public class GetEmailFornecedor {
 
         }
 
-        return email;
+        if (email.equals("")) {
+            System.out.println(select);
+            return "pauloh2012sul@gmail.com";
+        } else {
+
+            return email;
+
+        }
 
     }
 
