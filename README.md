@@ -1,5 +1,6 @@
 # ERP
-Mini ERP Materia de APLICATIVOS INTEGRADOS
+Mini ERP Matéria de APLICATIVOS INTEGRADOS
+
 Membros:
 Andre Pereira Martins,
 Lucas Medeiros,
