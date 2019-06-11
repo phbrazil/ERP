@@ -1,6 +1,9 @@
 # ERP
 Mini ERP Matéria de APLICATIVOS INTEGRADOS
 
+Usuário: erp@senac.com.br
+Senha: senac
+
 Membros:
 Andre Pereira Martins,
 Lucas Medeiros,
