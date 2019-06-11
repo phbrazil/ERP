@@ -1,6 +1,8 @@
 # ERP
 Mini ERP Matéria de APLICATIVOS INTEGRADOS
 
+Versão Live no link www.9ember.com.br/ERP
+
 Usuário: erp@senac.com.br
 Senha: senac
 
